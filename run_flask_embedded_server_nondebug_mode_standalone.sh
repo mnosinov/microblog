@@ -7,4 +7,4 @@ export MAIL_USE_TLS=1
 export MAIL_USERNAME=werty.microblog.sysadm
 export MAIL_PASSWORD=adm12345$
 
-flask run --host=0.0.0.0 --port=5002
+flask run --host=0.0.0.0 --port=5002 &
