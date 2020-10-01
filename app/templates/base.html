@@ -11,7 +11,7 @@
 {% block scripts %}
     {{ super() }}
     {{ moment.include_moment() }}
-    {{ moment.lang('ru') }}
+    {{ moment.lang(g.locale) }}
 {% endblock %}
 
 {% block navbar %}

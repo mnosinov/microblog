@@ -1,7 +1,7 @@
+from threading import Thread
 from flask import render_template
 from flask_mail import Message
-from threading import Thread
-from flask_babel import Babel, lazy_gettext as _l, _
+from flask_babel import _
 
 from app import app, mail
 
