@@ -5,4 +5,4 @@ these shell scripts have been used for Babel translation manipulations with file
 *.mo - file that is compiled and ready to use by Babel Flask extension
 
 But now the project is configurated to use flask translation commands:
-see export_vars_README.txt for more details about flask translation commands.
+see l10n_README.txt for more details about flask translation commands.

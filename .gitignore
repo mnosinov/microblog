@@ -139,3 +139,6 @@ cython_debug/
 # vim temp files
 *.swo
 *.swp
+
+app.db
+microblog.log*
