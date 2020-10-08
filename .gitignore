@@ -141,4 +141,5 @@ cython_debug/
 *.swp
 
 app.db
-microblog.log*
+microblog.log.*
+nohup.out
