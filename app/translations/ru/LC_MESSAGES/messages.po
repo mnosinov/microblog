@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-10-04 22:50+0600\n"
+"POT-Creation-Date: 2020-10-10 12:54+0600\n"
 "PO-Revision-Date: 2020-10-01 18:18+0600\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -255,19 +255,23 @@ msgstr "Подписаться"
 msgid "Unfollow"
 msgstr "Отписаться"
 
-#: app/templates/auth/login.html:12
+#: app/templates/auth/login.html:6
+msgid "this is test"
+msgstr "Это тестовая строка"
+
+#: app/templates/auth/login.html:13
 msgid "New User?"
 msgstr "Впервые здесь?"
 
-#: app/templates/auth/login.html:12
+#: app/templates/auth/login.html:13
 msgid "Click to Register!"
 msgstr "Регистрация"
 
-#: app/templates/auth/login.html:14
+#: app/templates/auth/login.html:15
 msgid "Forgot Your Password?"
 msgstr "Забыли пароль?"
 
-#: app/templates/auth/login.html:15
+#: app/templates/auth/login.html:16
 msgid "Click to Reset It"
 msgstr "Сброс пароля"
 
