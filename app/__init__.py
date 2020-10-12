@@ -44,21 +44,23 @@ def create_app(config_class=Config):
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
 
-    app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
-            if app.config['ELASTICSEARCH_URL'] else None
+    app.elasticsearch = Elasticsearch(
+        [app.config['ELASTICSEARCH_URL']]) if app.config['ELASTICSEARCH_URL'] \
+        else None
 
     if not app.debug and not app.testing:
         if app.config['MAIL_SERVER']:
-        # добавление логирования ошибок на почту админа, только для non-debug mode
+            # добавление логирования ошибок на почту админа,
+            # только для non-debug mode
             auth = None
             if app.config['MAIL_USERNAME'] or app.config['MAIL_PASSWORD']:
                 '''
-                казалось бы здесь надо вместо or поставить and,
-                но не обычное сочетание условий объясняется тем, что в некоторых
-                случаях для почтовой аутентификации используется токен, который
-                может быть указан в одном из полей MAIL_USERNAME или MAIL_PASSWORD
+                казалось бы здесь надо вместо or поставить and, но не обычное
+                сочетание условий объясняется тем, что в некоторых случаях для
+                почтовой аутентификации используется токен, который может быть
+                указан в одном из полей MAIL_USERNAME или MAIL_PASSWORD
                 '''
-                auth = (app.config['MAIL_USERNAME'], 
+                auth = (app.config['MAIL_USERNAME'],
                         app.config['MAIL_PASSWORD'])
             secure = None
             if app.config['MAIL_USE_TLS']:
@@ -71,16 +73,22 @@ def create_app(config_class=Config):
             mail_handler.setLevel(logging.ERROR)
             app.logger.addHandler(mail_handler)
 
-        # стандартное логирование ошибок в логфайл
-        if not os.path.exists('logs'):
-            os.mkdir('logs')
-        file_handler = RotatingFileHandler('logs/microblog.log',
-                                           maxBytes=10240, backupCount=10)
-        file_handler.setFormatter(logging.Formatter(
-            '%(asctime)s %(levelname)s: %(message)s '
-            '[in %(pathname)s:%(lineno)d]'))
-        file_handler.setLevel(logging.INFO)
-        app.logger.addHandler(file_handler)
+        if app.config['LOG_TO_STDOUT']:
+            # для случая использования heroku
+            stream_handler = logging.StreamHandler()
+            stream_handler.setLevel(logging.INFO)
+            app.logger.addHandler(stream_handler)
+        else:
+            # стандартное логирование ошибок в логфайл
+            if not os.path.exists('logs'):
+                os.mkdir('logs')
+            file_handler = RotatingFileHandler('logs/microblog.log',
+                                               maxBytes=10240, backupCount=10)
+            file_handler.setFormatter(logging.Formatter(
+                '%(asctime)s %(levelname)s: %(message)s '
+                '[in %(pathname)s:%(lineno)d]'))
+            file_handler.setLevel(logging.INFO)
+            app.logger.addHandler(file_handler)
 
         app.logger.setLevel(logging.INFO)
         app.logger.info('Microblog startup')
