@@ -1,8 +1,6 @@
-export_vars.sh is created to use for translation scripts:
+before using translation scripts you need to activate virtual env by command:
 
-before using translation scripts you need to source this shell script:
-
-$ source export_var.sh
+$ source /venv/bin/activate
 
 then you can use flask translate commands:
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-10-10 13:04+0600\n"
+"POT-Creation-Date: 2020-10-30 19:46+0600\n"
 "PO-Revision-Date: 2020-10-01 18:18+0600\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -124,7 +124,7 @@ msgstr "ОК"
 msgid "Say something"
 msgstr "Напишите сообщение Вашего поста"
 
-#: app/main/forms.py:37 app/main/routes.py:157
+#: app/main/forms.py:37 app/main/routes.py:166
 msgid "Search"
 msgstr "Поиск"
 
@@ -140,43 +140,43 @@ msgstr "Главная"
 msgid "Explore"
 msgstr "Лента сообщений"
 
-#: app/main/routes.py:89
+#: app/main/routes.py:97
 msgid "Your changes have been saved."
 msgstr "Изменения сохранены"
 
-#: app/main/routes.py:94 app/templates/edit_profile.html:5
+#: app/main/routes.py:102 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Редактировать профиль"
 
-#: app/main/routes.py:105 app/main/routes.py:125
+#: app/main/routes.py:113 app/main/routes.py:133
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Пользователь %(username)s не найден."
 
-#: app/main/routes.py:108
+#: app/main/routes.py:116
 msgid "You cannot follow yourself!"
 msgstr "Вы не можете подписаться сами на себя!"
 
-#: app/main/routes.py:112
+#: app/main/routes.py:120
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "Вы подписались на %(username)s!"
 
-#: app/main/routes.py:128
+#: app/main/routes.py:136
 msgid "You cannot unfollow yourself!"
 msgstr "Вы не можете отписаться сами от себя"
 
-#: app/main/routes.py:132
+#: app/main/routes.py:140
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "Вы отписались от %(username)s."
 
-#: app/templates/_post.html:14
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s сказал %(when)s"
 
-#: app/templates/_post.html:25
+#: app/templates/_post.html:27
 msgid "Translate"
 msgstr "Перевести"
 
@@ -229,16 +229,16 @@ msgstr "Следующие результаты"
 msgid "User"
 msgstr "Пользователь"
 
-#: app/templates/user.html:11
+#: app/templates/user.html:11 app/templates/user_popup.html:9
 msgid "Last seen on"
 msgstr "Последний раз был"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:12
 #, python-format
 msgid "%(count)d followers"
 msgstr "Подписчиков: %(count)d"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:13
 #, python-format
 msgid "%(count)d following"
 msgstr "Подписан на: %(count)d"
@@ -247,11 +247,11 @@ msgstr "Подписан на: %(count)d"
 msgid "Edit your profile"
 msgstr "Редактировать профиль"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:20 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Подписаться"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:27 app/templates/user_popup.html:27
 msgid "Unfollow"
 msgstr "Отписаться"
 
@@ -292,5 +292,4 @@ msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr ""
 "Администрация сайта была уведомлена об этом. Приносим свои извинения за "
 "неудобства."
-
 
