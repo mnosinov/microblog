@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-11-04 18:26+0600\n"
+"POT-Creation-Date: 2020-11-08 01:55+0600\n"
 "PO-Revision-Date: 2020-10-01 18:18+0600\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: app/__init__.py:19
+#: app/__init__.py:21
 msgid "Please log in to access this page."
 msgstr "Пожалуйста выполните вход, чтобы получить доступ к запрашиваемой странице."
 
-#: app/auth/email.py:8 app/email.py:24
+#: app/auth/email.py:8 app/email.py:31
 msgid "[Microblog] Reset Your Password"
 msgstr "[Microblog] Сброс пароля"
 
-#: app/auth/email.py:11 app/email.py:27
+#: app/auth/email.py:11 app/email.py:34
 msgid "email/reset_password.txt"
 msgstr "email/reset_password_ru.txt"
 
-#: app/auth/email.py:13 app/email.py:29
+#: app/auth/email.py:13 app/email.py:36
 msgid "email/reset_password.html"
 msgstr "email/reset_password_ru.html"
 
@@ -183,6 +183,14 @@ msgstr "Ваше сообщение отправлено."
 msgid "Send Message"
 msgstr "Отправить сообщение"
 
+#: app/main/routes.py:225
+msgid "An export task is currently in progress"
+msgstr "Экспортирование в процессе"
+
+#: app/main/routes.py:227
+msgid "Exporting posts..."
+msgstr "Экспортирование постов..."
+
 #: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
@@ -200,19 +208,19 @@ msgstr "Добро пожаловать в Microblog"
 msgid "Login"
 msgstr "Вход"
 
-#: app/templates/base.html:39 app/templates/messages.html:4
+#: app/templates/base.html:38 app/templates/messages.html:4
 msgid "Messages"
 msgstr "Сообщения"
 
-#: app/templates/base.html:50
+#: app/templates/base.html:47
 msgid "Profile"
 msgstr "Профиль"
 
-#: app/templates/base.html:51
+#: app/templates/base.html:48
 msgid "Logout"
 msgstr "Выйти"
 
-#: app/templates/base.html:89
+#: app/templates/base.html:100
 msgid "Error: Could not contact server."
 msgstr "Не удалось соединиться с сервером"
 
@@ -221,11 +229,11 @@ msgstr "Не удалось соединиться с сервером"
 msgid "Hi, %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:49
+#: app/templates/index.html:17 app/templates/user.html:56
 msgid "Newer posts"
 msgstr "Новые посты"
 
-#: app/templates/index.html:22 app/templates/user.html:54
+#: app/templates/index.html:22 app/templates/user.html:61
 msgid "Older posts"
 msgstr "Старые посты"
 
@@ -250,6 +258,7 @@ msgid "Next results"
 msgstr "Следующие результаты"
 
 #: app/templates/send_message.html:5
+#, python-format
 msgid "Send Message to %(recipient)s"
 msgstr "Послать сообщение %(recipient)s"
 
@@ -283,7 +292,11 @@ msgstr "Подписаться"
 msgid "Unfollow"
 msgstr "Отписаться"
 
-#: app/templates/user.html:35
+#: app/templates/user.html:34
+msgid "Export your posts"
+msgstr "Экспорт моих постов"
+
+#: app/templates/user.html:42
 msgid "Send private message"
 msgstr "Отправить личное сообщение"
 

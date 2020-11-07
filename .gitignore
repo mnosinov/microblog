@@ -143,3 +143,4 @@ cython_debug/
 app.db
 microblog.log.*
 nohup.out
+dump.rdb
